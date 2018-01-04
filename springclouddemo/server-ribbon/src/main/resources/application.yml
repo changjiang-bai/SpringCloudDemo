@@ -1,0 +1,14 @@
+server:
+  port: 8764
+spring:
+  application:
+    name: service-ribbon
+
+eureka:
+  center:
+    port: 8761
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.center.hostname}:${eureka.center.port}/eureka/
+
