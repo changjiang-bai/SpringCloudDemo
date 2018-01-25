@@ -13,10 +13,10 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableHystrix
 @EnableHystrixDashboard
-public class ServerRibbonApplication {
+public class ServiceRibbonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServerRibbonApplication.class, args);
+		SpringApplication.run(ServiceRibbonApplication.class, args);
 	}
 
 	@Bean

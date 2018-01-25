@@ -1,17 +1,15 @@
 server:
   port: 8762
-
-
 eureka:
-  instance:
-    hostname: 127.0.0.1
-  center:
-    port: 8761
-    hostname: 127.0.0.1
   client:
     service-url:
-      defaultZone: http://${eureka.center.hostname}:${eureka.center.port}/eureka/
+      defaultZone: http://eurekaserver:8761/eureka/
 
 spring:
   application:
     name: service-hi
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+        service-id: server-zipkin
